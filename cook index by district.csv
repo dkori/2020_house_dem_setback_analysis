@@ -1,0 +1,436 @@
+,District,PVI,Party ofrepresentative
+0,Alabama 1,R+15,Republican
+1,Alabama 2,R+16,Republican
+2,Alabama 3,R+16,Republican
+3,Alabama 4,R+30,Republican
+4,Alabama 5,R+18,Republican
+5,Alabama 6,R+26,Republican
+6,Alabama 7,D+20,Democratic
+7,Alaska at-large,R+9,Republican
+8,Arizona 1,R+2,Democratic
+9,Arizona 2,R+1,Democratic
+10,Arizona 3,D+13,Democratic
+11,Arizona 4,R+21,Republican
+12,Arizona 5,R+15,Republican
+13,Arizona 6,R+9,Republican
+14,Arizona 7,D+23,Democratic
+15,Arizona 8,R+13,Republican
+16,Arizona 9,D+4,Democratic
+17,Arkansas 1,R+17,Republican
+18,Arkansas 2,R+7,Republican
+19,Arkansas 3,R+19,Republican
+20,Arkansas 4,R+17,Republican
+21,California 1,R+11,Republican
+22,California 2,D+22,Democratic
+23,California 3,D+5,Democratic
+24,California 4,R+10,Republican
+25,California 5,D+21,Democratic
+26,California 6,D+21,Democratic
+27,California 7,D+3,Democratic
+28,California 8,R+9,Republican
+29,California 9,D+8,Democratic
+30,California 10,EVEN,Democratic
+31,California 11,D+21,Democratic
+32,California 12,D+37,Democratic
+33,California 13,D+40,Democratic
+34,California 14,D+27,Democratic
+35,California 15,D+20,Democratic
+36,California 16,D+9,Democratic
+37,California 17,D+25,Democratic
+38,California 18,D+23,Democratic
+39,California 19,D+24,Democratic
+40,California 20,D+23,Democratic
+41,California 21,D+5,Republican
+42,California 22,R+8,Republican
+43,California 23,R+14,Republican
+44,California 24,D+7,Democratic
+45,California 25,EVEN,Republican
+46,California 26,D+7,Democratic
+47,California 27,D+16,Democratic
+48,California 28,D+23,Democratic
+49,California 29,D+29,Democratic
+50,California 30,D+18,Democratic
+51,California 31,D+8,Democratic
+52,California 32,D+17,Democratic
+53,California 33,D+16,Democratic
+54,California 34,D+35,Democratic
+55,California 35,D+19,Democratic
+56,California 36,D+2,Democratic
+57,California 37,D+37,Democratic
+58,California 38,D+17,Democratic
+59,California 39,EVEN,Republican
+60,California 40,D+33,Democratic
+61,California 41,D+12,Democratic
+62,California 42,R+9,Republican
+63,California 43,D+29,Democratic
+64,California 44,D+35,Democratic
+65,California 45,R+3,Democratic
+66,California 46,D+15,Democratic
+67,California 47,D+13,Democratic
+68,California 48,R+4,Republican
+69,California 49,R+1,Democratic
+70,California 50,R+11,Republican
+71,California 51,D+22,Democratic
+72,California 52,D+6,Democratic
+73,California 53,D+14,Democratic
+74,Colorado 1,D+21,Democratic
+75,Colorado 2,D+9,Democratic
+76,Colorado 3,R+6,Republican
+77,Colorado 4,R+13,Republican
+78,Colorado 5,R+14,Republican
+79,Colorado 6,D+2,Democratic
+80,Colorado 7,D+6,Democratic
+81,Connecticut 1,D+12,Democratic
+82,Connecticut 2,D+3,Democratic
+83,Connecticut 3,D+9,Democratic
+84,Connecticut 4,D+7,Democratic
+85,Connecticut 5,D+2,Democratic
+86,Delaware at-large,D+6,Democratic
+87,Florida 1,R+22,Republican
+88,Florida 2,R+18,Republican
+89,Florida 3,R+9,Republican
+90,Florida 4,R+17,Republican
+91,Florida 5,D+12,Democratic
+92,Florida 6,R+7,Republican
+93,Florida 7,EVEN,Democratic
+94,Florida 8,R+11,Republican
+95,Florida 9,D+5,Democratic
+96,Florida 10,D+11,Democratic
+97,Florida 11,R+15,Republican
+98,Florida 12,R+8,Republican
+99,Florida 13,D+2,Democratic
+100,Florida 14,D+7,Democratic
+101,Florida 15,R+6,Republican
+102,Florida 16,R+7,Republican
+103,Florida 17,R+13,Republican
+104,Florida 18,R+5,Republican
+105,Florida 19,R+13,Republican
+106,Florida 20,D+31,Democratic
+107,Florida 21,D+9,Democratic
+108,Florida 22,D+6,Democratic
+109,Florida 23,D+11,Democratic
+110,Florida 24,D+34,Democratic
+111,Florida 25,R+4,Republican
+112,Florida 26,D+6,Republican
+113,Florida 27,D+5,Republican
+114,Georgia 1,R+9,Republican
+115,Georgia 2,D+6,Democratic
+116,Georgia 3,R+18,Republican
+117,Georgia 4,D+24,Democratic
+118,Georgia 5,D+34,Democratic
+119,Georgia 6,R+8,Democratic
+120,Georgia 7,R+9,Democratic
+121,Georgia 8,R+15,Republican
+122,Georgia 9,R+31,Republican
+123,Georgia 10,R+15,Republican
+124,Georgia 11,R+17,Republican
+125,Georgia 12,R+9,Republican
+126,Georgia 13,D+20,Democratic
+127,Georgia 14,R+27,Republican
+128,Hawaii 1,D+17,Democratic
+129,Hawaii 2,D+19,Democratic
+130,Idaho 1,R+21,Republican
+131,Idaho 2,R+17,Republican
+132,Illinois 1,D+27,Democratic
+133,Illinois 2,D+29,Democratic
+134,Illinois 3,D+6,Democratic
+135,Illinois 4,D+33,Democratic
+136,Illinois 5,D+20,Democratic
+137,Illinois 6,R+2,Democratic
+138,Illinois 7,D+38,Democratic
+139,Illinois 8,D+8,Democratic
+140,Illinois 9,D+18,Democratic
+141,Illinois 10,D+10,Democratic
+142,Illinois 11,D+9,Democratic
+143,Illinois 12,R+5,Republican
+144,Illinois 13,R+3,Republican
+145,Illinois 14,R+5,Democratic
+146,Illinois 15,R+21,Republican
+147,Illinois 16,R+8,Republican
+148,Illinois 17,D+3,Democratic
+149,Illinois 18,R+15,Republican
+150,Indiana 1,D+8,Democratic
+151,Indiana 2,R+11,Republican
+152,Indiana 3,R+18,Republican
+153,Indiana 4,R+17,Republican
+154,Indiana 5,R+9,Republican
+155,Indiana 6,R+18,Republican
+156,Indiana 7,D+11,Democratic
+157,Indiana 8,R+15,Republican
+158,Indiana 9,R+13,Republican
+159,Iowa 1,D+1,Republican
+160,Iowa 2,D+1,TBD
+161,Iowa 3,R+1,Democratic
+162,Iowa 4,R+11,Republican
+163,Kansas 1,R+24,Republican
+164,Kansas 2,R+10,Republican
+165,Kansas 3,R+4,Democratic
+166,Kansas 4,R+15,Republican
+167,Kentucky 1,R+23,Republican
+168,Kentucky 2,R+19,Republican
+169,Kentucky 3,D+6,Democratic
+170,Kentucky 4,R+18,Republican
+171,Kentucky 5,R+31,Republican
+172,Kentucky 6,R+9,Republican
+173,Louisiana 1,R+24,Republican
+174,Louisiana 2,D+25,Democratic
+175,Louisiana 3,R+20,Republican
+176,Louisiana 4,R+13,Republican
+177,Louisiana 5,R+15,Republican
+178,Louisiana 6,R+19,Republican
+179,Maine 1,D+8,Democratic
+180,Maine 2,R+2,Democratic
+181,Maryland 1,R+14,Republican
+182,Maryland 2,D+11,Democratic
+183,Maryland 3,D+13,Democratic
+184,Maryland 4,D+28,Democratic
+185,Maryland 5,D+16,Democratic
+186,Maryland 6,D+6,Democratic
+187,Maryland 7,D+26,Democratic
+188,Maryland 8,D+14,Democratic
+189,Massachusetts 1,D+12,Democratic
+190,Massachusetts 2,D+9,Democratic
+191,Massachusetts 3,D+9,Democratic
+192,Massachusetts 4,D+9,Democratic
+193,Massachusetts 5,D+18,Democratic
+194,Massachusetts 6,D+6,Democratic
+195,Massachusetts 7,D+34,Democratic
+196,Massachusetts 8,D+10,Democratic
+197,Massachusetts 9,D+4,Democratic
+198,Michigan 1,R+9,Republican
+199,Michigan 2,R+9,Republican
+200,Michigan 3,R+6,Republican
+201,Michigan 4,R+10,Republican
+202,Michigan 5,D+5,Democratic
+203,Michigan 6,R+4,Republican
+204,Michigan 7,R+7,Republican
+205,Michigan 8,R+4,Democratic
+206,Michigan 9,D+4,Democratic
+207,Michigan 10,R+13,Republican
+208,Michigan 11,R+4,Democratic
+209,Michigan 12,D+14,Democratic
+210,Michigan 13,D+33,Democratic
+211,Michigan 14,D+30,Democratic
+212,Minnesota 1,R+5,Republican
+213,Minnesota 2,R+2,Democratic
+214,Minnesota 3,D+1,Democratic
+215,Minnesota 4,D+14,Democratic
+216,Minnesota 5,D+26,Democratic
+217,Minnesota 6,R+12,Republican
+218,Minnesota 7,R+12,Republican
+219,Minnesota 8,R+4,Republican
+220,Mississippi 1,R+16,Republican
+221,Mississippi 2,D+14,Democratic
+222,Mississippi 3,R+13,Republican
+223,Mississippi 4,R+21,Republican
+224,Missouri 1,D+29,Democratic
+225,Missouri 2,R+8,Republican
+226,Missouri 3,R+18,Republican
+227,Missouri 4,R+17,Republican
+228,Missouri 5,D+7,Democratic
+229,Missouri 6,R+16,Republican
+230,Missouri 7,R+23,Republican
+231,Missouri 8,R+24,Republican
+232,Montana at-large,R+11,Republican
+233,Nebraska 1,R+11,Republican
+234,Nebraska 2,R+4,Republican
+235,Nebraska 3,R+27,Republican
+236,Nevada 1,D+15,Democratic
+237,Nevada 2,R+7,Republican
+238,Nevada 3,R+2,Democratic
+239,Nevada 4,D+3,Democratic
+240,New Hampshire 1,R+2,Democratic
+241,New Hampshire 2,D+2,Democratic
+242,New Jersey 1,D+13,Democratic
+243,New Jersey 2,R+1,Republican
+244,New Jersey 3,R+2,Democratic
+245,New Jersey 4,R+8,Republican
+246,New Jersey 5,R+3,Democratic
+247,New Jersey 6,D+9,Democratic
+248,New Jersey 7,R+3,Democratic
+249,New Jersey 8,D+27,Democratic
+250,New Jersey 9,D+16,Democratic
+251,New Jersey 10,D+36,Democratic
+252,New Jersey 11,R+3,Democratic
+253,New Jersey 12,D+16,Democratic
+254,New Mexico 1,D+7,Democratic
+255,New Mexico 2,R+6,Republican
+256,New Mexico 3,D+8,Democratic
+257,New York 1,R+5,Republican
+258,New York 2,R+3,Republican
+259,New York 3,D+1,Democratic
+260,New York 4,D+4,Democratic
+261,New York 5,D+37,Democratic
+262,New York 6,D+16,Democratic
+263,New York 7,D+38,Democratic
+264,New York 8,D+36,Democratic
+265,New York 9,D+34,Democratic
+266,New York 10,D+26,Democratic
+267,New York 11,R+3,Republican
+268,New York 12,D+31,Democratic
+269,New York 13,D+43,Democratic
+270,New York 14,D+29,Democratic
+271,New York 15,D+44,Democratic
+272,New York 16,D+24,Democratic
+273,New York 17,D+7,Democratic
+274,New York 18,R+1,Democratic
+275,New York 19,R+2,Democratic
+276,New York 20,D+7,Democratic
+277,New York 21,R+4,Republican
+278,New York 22,R+6,TBD
+279,New York 23,R+6,Republican
+280,New York 24,D+3,Republican
+281,New York 25,D+8,Democratic
+282,New York 26,D+11,Democratic
+283,New York 27,R+11,Republican
+284,North Carolina 1,D+17,Democratic
+285,North Carolina 2,R+7,Democratic
+286,North Carolina 3,R+12,Republican
+287,North Carolina 4,D+17,Democratic
+288,North Carolina 5,R+10,Republican
+289,North Carolina 6,R+9,Democratic
+290,North Carolina 7,R+9,Republican
+291,North Carolina 8,R+8,Republican
+292,North Carolina 9,R+8,Republican
+293,North Carolina 10,R+12,Republican
+294,North Carolina 11,R+14,Republican
+295,North Carolina 12,D+18,Democratic
+296,North Carolina 13,R+6,Republican
+297,North Dakota at-large,R+16,Republican
+298,Ohio 1,R+5,Republican
+299,Ohio 2,R+9,Republican
+300,Ohio 3,D+19,Democratic
+301,Ohio 4,R+14,Republican
+302,Ohio 5,R+11,Republican
+303,Ohio 6,R+16,Republican
+304,Ohio 7,R+12,Republican
+305,Ohio 8,R+17,Republican
+306,Ohio 9,D+14,Democratic
+307,Ohio 10,R+4,Republican
+308,Ohio 11,D+32,Democratic
+309,Ohio 12,R+7,Republican
+310,Ohio 13,D+7,Democratic
+311,Ohio 14,R+5,Republican
+312,Ohio 15,R+7,Republican
+313,Ohio 16,R+8,Republican
+314,Oklahoma 1,R+17,Republican
+315,Oklahoma 2,R+24,Republican
+316,Oklahoma 3,R+27,Republican
+317,Oklahoma 4,R+20,Republican
+318,Oklahoma 5,R+10,Republican
+319,Oregon 1,D+9,Democratic
+320,Oregon 2,R+11,Republican
+321,Oregon 3,D+24,Democratic
+322,Oregon 4,EVEN,Democratic
+323,Oregon 5,EVEN,Democratic
+324,Pennsylvania 1,R+1,Republican
+325,Pennsylvania 2,D+25,Democratic
+326,Pennsylvania 3,D+41,Democratic
+327,Pennsylvania 4,D+7,Democratic
+328,Pennsylvania 5,D+13,Democratic
+329,Pennsylvania 6,D+2,Democratic
+330,Pennsylvania 7,D+1,Democratic
+331,Pennsylvania 8,R+1,Democratic
+332,Pennsylvania 9,R+14,Republican
+333,Pennsylvania 10,R+6,Republican
+334,Pennsylvania 11,R+14,Republican
+335,Pennsylvania 12,R+17,Republican
+336,Pennsylvania 13,R+22,Republican
+337,Pennsylvania 14,R+14,Republican
+338,Pennsylvania 15,R+20,Republican
+339,Pennsylvania 16,R+8,Republican
+340,Pennsylvania 17,R+3,Democratic
+341,Pennsylvania 18,D+13,Democratic
+342,Rhode Island 1,D+14,Democratic
+343,Rhode Island 2,D+6,Democratic
+344,South Carolina 1,R+10,Republican
+345,South Carolina 2,R+12,Republican
+346,South Carolina 3,R+19,Republican
+347,South Carolina 4,R+15,Republican
+348,South Carolina 5,R+9,Republican
+349,South Carolina 6,D+19,Democratic
+350,South Carolina 7,R+9,Republican
+351,South Dakota at-large,R+14,Republican
+352,Tennessee 1,R+28,Republican
+353,Tennessee 2,R+20,Republican
+354,Tennessee 3,R+18,Republican
+355,Tennessee 4,R+20,Republican
+356,Tennessee 5,D+7,Democratic
+357,Tennessee 6,R+24,Republican
+358,Tennessee 7,R+20,Republican
+359,Tennessee 8,R+19,Republican
+360,Tennessee 9,D+28,Democratic
+361,Texas 1,R+25,Republican
+362,Texas 2,R+11,Republican
+363,Texas 3,R+13,Republican
+364,Texas 4,R+28,Republican
+365,Texas 5,R+16,Republican
+366,Texas 6,R+9,Republican
+367,Texas 7,R+7,Democratic
+368,Texas 8,R+28,Republican
+369,Texas 9,D+29,Democratic
+370,Texas 10,R+9,Republican
+371,Texas 11,R+32,Republican
+372,Texas 12,R+18,Republican
+373,Texas 13,R+33,Republican
+374,Texas 14,R+12,Republican
+375,Texas 15,D+7,Democratic
+376,Texas 16,D+17,Democratic
+377,Texas 17,R+12,Republican
+378,Texas 18,D+27,Democratic
+379,Texas 19,R+27,Republican
+380,Texas 20,D+10,Democratic
+381,Texas 21,R+10,Republican
+382,Texas 22,R+10,Republican
+383,Texas 23,R+1,Republican
+384,Texas 24,R+9,Republican
+385,Texas 25,R+11,Republican
+386,Texas 26,R+18,Republican
+387,Texas 27,R+13,Republican
+388,Texas 28,D+9,Democratic
+389,Texas 29,D+19,Democratic
+390,Texas 30,D+29,Democratic
+391,Texas 31,R+10,Republican
+392,Texas 32,R+5,Democratic
+393,Texas 33,D+23,Democratic
+394,Texas 34,D+10,Democratic
+395,Texas 35,D+15,Democratic
+396,Texas 36,R+26,Republican
+397,Utah 1,R+26,Republican
+398,Utah 2,R+16,Republican
+399,Utah 3,R+25,Republican
+400,Utah 4,R+13,Republican
+401,Vermont at-large,D+15,Democratic
+402,Virginia 1,R+8,Republican
+403,Virginia 2,R+3,Democratic
+404,Virginia 3,D+16,Democratic
+405,Virginia 4,D+10,Democratic
+406,Virginia 5,R+6,Republican
+407,Virginia 6,R+13,Republican
+408,Virginia 7,R+6,Democratic
+409,Virginia 8,D+21,Democratic
+410,Virginia 9,R+19,Republican
+411,Virginia 10,D+1,Democratic
+412,Virginia 11,D+15,Democratic
+413,Washington 1,D+6,Democratic
+414,Washington 2,D+10,Democratic
+415,Washington 3,R+4,Republican
+416,Washington 4,R+13,Republican
+417,Washington 5,R+8,Republican
+418,Washington 6,D+6,Democratic
+419,Washington 7,D+33,Democratic
+420,Washington 8,EVEN,Democratic
+421,Washington 9,D+21,Democratic
+422,Washington 10,D+5,Democratic
+423,West Virginia 1,R+19,Republican
+424,West Virginia 2,R+17,Republican
+425,West Virginia 3,R+23,Republican
+426,Wisconsin 1,R+5,Republican
+427,Wisconsin 2,D+18,Democratic
+428,Wisconsin 3,EVEN,Democratic
+429,Wisconsin 4,D+25,Democratic
+430,Wisconsin 5,R+13,Republican
+431,Wisconsin 6,R+8,Republican
+432,Wisconsin 7,R+8,Republican
+433,Wisconsin 8,R+7,Republican
+434,Wyoming at-large,R+25,Republican

@@ -1,0 +1,169 @@
+---
+title: "Who owns the Democrat setback"
+author: "Devraj Kori"
+date: "12/2/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(readr)
+library(httr)
+# read in datasets 
+cook_index<-read_csv("cook index by district.csv")%>%
+  # for some reason there's a weird unicode character in place of space for the district, printing fixes it
+  mutate(District = gsub(" "," ",District))
+
+progressive_caucus<-read_csv("progressive_caucus_members_29_nov_2020.csv")
+results2020<-read_csv(url("https://raw.githubusercontent.com/dkori/2020_cd_election_politico_scrape/master/results%20by%20cd%202020.csv"))
+results2018<-read_csv("1976-2018-house3.csv")%>%
+  filter(year == 2018)
+# create a crosswalk state names and abbreviations
+state_walk <-data.frame(state_name = state.name,
+                        state_abb = state.abb)
+```
+
+Part 1: Looking at partisan lean of Progressive Member districts
+
+```{r cook_prog_compare, echo=FALSE,message=FALSE,warning=FALSE}
+# to change PVI to an ordered factor, create a separate dataset, make it plus/minus, grab unique values as factor levels
+pvi_factor<-cook_index%>%
+  # grab PVI
+  select(PVI)%>%
+  # only unique values
+  unique()%>%
+  # create a numeric version where - means more democratic, + means more republican
+  mutate(PVI2 = gsub("R\\+","",PVI),
+         PVI3 = gsub("D\\+","-",PVI2),
+         PVI_numeric = as.numeric(PVI3))%>%
+  # make numeric 0 if PVI is 3 is even
+  mutate(PVI_numeric = case_when(PVI=="EVEN" ~ 0,
+                                 TRUE ~ PVI_numeric))%>%
+  # sort by numeric version
+  arrange(PVI_numeric)
+
+# join cook index with progressive_caucus membership
+cook_prog<-cook_index%>%
+  # isolate state from district
+  mutate(state_name = gsub(" [0-9]+","",District))%>%
+  # handle "at-large"
+  mutate(state_name = gsub(" at-large","",state_name))%>%
+  # isolate district number
+  rowwise()%>%
+  mutate(district_num = gsub(state_name,"",District),
+         # trim whitespace
+         district_num = trimws(district_num))%>%
+  ungroup()%>%
+  # join in state abbrev crosswalk
+  left_join(state_walk)%>%
+  rowwise()%>%
+  # create a new district column
+  mutate(district=paste(state_abb,district_num,sep="-"))%>%
+  # join in progressive caucus
+  left_join(progressive_caucus)%>%
+  # create an updated party column
+  mutate(party_update = case_when(!is.na(member_name) ~ "Progressive Caucus Dem",
+                                  TRUE~`Party ofrepresentative`))%>%
+  # make party update a factor
+  mutate(party_update = factor(party_update,levels = c("Progressive Caucus Dem", "Democratic", "Republican")))%>%
+  # make PVI a factor
+  mutate(PVI_factor = factor(PVI,levels = pvi_factor$PVI))%>%
+  filter(!is.na(party_update))%>%
+  # create an alpha column to dim non progressive dem rows
+  mutate(alpha_val = case_when(party_update == "Progressive Caucus Dem" ~ 1,
+                           TRUE ~ .75))
+# a color palette indicating party
+color_pallete_function <- colorRampPalette(
+  colors = c("Green", "Blue", "Red"),
+  space = "Lab" # Option used when colors do not represent a quantitative scale
+  )
+# create factor breaks
+breaks = 1:75
+breaks = breaks[breaks%%2 == 0]
+factor_breaks = pvi_factor[breaks+1,]$PVI
+test<-cook_prog%>%
+  filter(is.na(party_update))
+cook_prog%>%
+  ggplot(aes(x=PVI_factor,fill=party_update,alpha=alpha_val))+
+  geom_bar(stat="count",position="stack")+
+  scale_fill_manual(values = color_pallete_function(3))+
+  theme_minimal()+
+  theme(legend.position="bottom",
+        axis.text.x = element_text(angle = 90))+
+  labs(y="Representatives",x = "District Cook Partisan Index", fill = "")+
+  scale_alpha(guide="none")+
+  scale_x_discrete(breaks = factor_breaks)
+
+progressive_dem_test<-cook_prog%>%
+  filter(!is.na(member_name))
+```
+
+```{r compare_2018_2020}
+# reshape result files for join
+reshaped_2018<-results2018%>%
+  select(state,state_po,district,party,candidatevotes)%>%
+  mutate(party=gsub("DEMOCRATIC-FARMER-LABOR","DEMOCRAT",party))%>%
+  filter(party%in%c("REPUBLICAN","DEMOCRAT"))%>%
+  mutate(party = case_when(party=="REPUBLICAN"~"GOP",
+                           TRUE ~ "DEM"))%>%
+  # to clarify the situation where multiple candidates from the same party ran, keep only the max of each party per district
+  group_by(state,state_po,district, party)%>%
+  summarise(candidatevotes = max(candidatevotes))%>%
+  ungroup()%>%
+  spread(key = party, value = candidatevotes)%>%
+  # replace NAs with 0s
+  replace_na(list(DEM=0,
+                  GOP=0))%>%
+  mutate(total_votes = DEM+GOP,
+         dem_pct = DEM/total_votes,
+         rep_pct = GOP/total_votes,
+         rep_margin=dem_pct - rep_pct)
+# same as above for 2020
+reshaped_2020<-results2020%>%
+  select(state,district,party,votes)%>%
+  mutate(state = gsub("-"," ",state))%>%
+  filter(party%in%c("gop","dem"))%>%
+  # format so it will match up with 2018 
+  mutate(party = toupper(party),
+         state = toupper(state),
+         district = as.numeric(gsub("cd0?","",district)))%>%
+  # to clarify the situation where multiple candidates from the same party ran, keep only the max of each party per district
+  group_by(state,district, party)%>%
+  summarise(votes = max(votes))%>%
+  ungroup()%>%
+  spread(key = party, value = votes)%>%
+  # replace NAs with 0s
+  replace_na(list(DEM=0,
+                  GOP=0))%>%
+  mutate(total_votes = DEM+GOP,
+         dem_pct = DEM/total_votes,
+         rep_pct = GOP/total_votes,
+         rep_margin=dem_pct - rep_pct)
+
+#join the reshaped files together
+comparison<-reshaped_2018%>%
+  select(state,state_po,district,margin18 = rep_margin)%>%
+  inner_join(reshaped_2020%>%
+               select(state,district,margin20 = rep_margin))%>%
+  filter(!is.na(margin18) & !is.na(margin20))%>%
+  # add a district column in format similar to prog caucus
+  mutate(district=paste(state_po,district,sep="-"))%>%
+  left_join(progressive_caucus%>%
+              mutate(district = gsub(" at-large","-0",district)))%>%
+  mutate(prog_flag = case_when(!is.na(member_name)~"Progressive Caucus",
+                               TRUE ~ "Other"))
+comparison%>%
+  ggplot(aes(x=margin18,y=margin20,color=prog_flag))+
+  geom_point(alpha=.5)+
+  theme(legend.position="bottom")+
+  geom_hline(aes(yintercept = 0))+
+  geom_vline(aes(xintercept=0))
+
+test<-comparison%>%filter(!is.na(member_name))%>%filter(margin20>0)%>%filter(margin18==-1)
+
+```
+
+```{r comparison_zoomed, echo=FALSE,warning=FALSE,message=FALSE}
