@@ -1,5 +1,10 @@
 ---
 title: "Who owns the Democrat setback"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "Devraj Kori"
 date: "12/2/2020"
 output: html_document
@@ -153,8 +158,8 @@ comparison<-reshaped_2018%>%
   mutate(district=paste(state_po,district,sep="-"))%>%
   left_join(progressive_caucus%>%
               mutate(district = gsub(" at-large","-0",district)))%>%
-  mutate(prog_flag = case_when(!is.na(member_name)~"Progressive Caucus",
-                               TRUE ~ "Other"))
+  mutate(prog_flag = case_when(!is.na(member_name)~"Progressive Caucus Candidate",
+                               TRUE ~ "Other Race"))
 comparison%>%
   ggplot(aes(x=margin18,y=margin20,color=prog_flag))+
   geom_point(alpha=.5)+
@@ -167,3 +172,22 @@ test<-comparison%>%filter(!is.na(member_name))%>%filter(margin20>0)%>%filter(mar
 ```
 
 ```{r comparison_zoomed, echo=FALSE,warning=FALSE,message=FALSE}
+comparison%>%
+  filter(margin18<1 & margin20<1)%>%
+  ggplot(aes(x=margin18,y=margin20),ymin=-.5,xmin=-.5)+
+  geom_point(aes(color=prog_flag),alpha=.5)+
+  theme_minimal()+
+  theme(legend.position="bottom")+
+  geom_hline(aes(yintercept = 0))+
+  geom_vline(aes(xintercept=0))+
+  xlim(c(-.5,1))+
+  ylim(c(-.5,1))+
+  geom_abline(a=1,b=0)+
+  labs(y= "Dem win margin 2020",
+       x = "Dem win margin 2018",
+       color = "",
+       title = "Comparing house race results: 2018 vs 2020")+
+  geom_smooth(method="lm",color="black",se=FALSE,linetype="dashed")
+  
+
+```
