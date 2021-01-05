@@ -188,6 +188,28 @@ comparison%>%
        color = "",
        title = "Comparing house race results: 2018 vs 2020")+
   geom_smooth(method="lm",color="black",se=FALSE,linetype="dashed")
-  
 
+```
+
+```{r comparison_by_cook, echo=FALSE, warning=FALSE,message=FALSE}
+# combine comparison with cook
+comparison_cook<-cook_prog%>%
+  mutate(district = gsub("-at-large","-0",district))%>%
+  inner_join(comparison,
+             by="district")%>%
+  mutate(margin_change = margin20-margin18)
+
+comparison_cook%>%
+  filter(margin18!=1 & margin20!=1)%>%
+  ggplot(aes(x=PVI_factor,y=margin_change,color=party_update))+
+  geom_point(position = position_jitter(w = 0.5, h = 0),alpha=.7)+
+  scale_color_manual(values = color_pallete_function(3))+
+  theme(legend.position="bottom",
+        axis.text.x = element_text(angle = 90))+
+  labs(y = "Dem win margin increase - 2018 to 2020",
+       color = "Incumbent Party")+
+  scale_x_discrete(breaks = factor_breaks)
+
+test<-comparison_cook%>%
+  filter(PVI=="D+6")
 ```
